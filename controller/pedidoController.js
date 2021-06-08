@@ -33,7 +33,7 @@ exports.inserirPedido= (req, res) => {
             type: 'int'
     } */
 
-    /* #swagger.parameters['observações'] = {
+    /* #swagger.parameters['observacoes'] = {
             description: 'Um filtro qualquer.',
             type: 'string'
     } */
@@ -41,6 +41,7 @@ exports.inserirPedido= (req, res) => {
  
     //Obter o dado do request nome e o preco
     const pedido = req.query;
+    console.log(pedido)
     //Validar os dados
     if (pedido.cod_cli == undefined | pedido.cod_cli =="" | pedido.cod_prod == undefined | pedido.cod_prod == "" |
     pedido.quantidade == undefined | pedido.quantidade == "" ){

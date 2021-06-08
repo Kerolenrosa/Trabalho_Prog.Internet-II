@@ -108,7 +108,7 @@
             "in": "query"
           },
           {
-            "name": "observações",
+            "name": "observacoes",
             "description": "Um filtro qualquer.",
             "type": "string",
             "in": "query"
