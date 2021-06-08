@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "9ff4287a-fd85-4e99-a3e2-1aa9e48de562",
+		"name": "Trabalho",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "inserirCliente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6Ik1hcmlhIEVkdWFyZGEiLCJjcGYiOiI5OTk2NjY5OTk2NiIsImlhdCI6MTYyMjg0OTgzNCwiZXhwIjoxNjIyODUzNDM0fQ.1VR6Vk0T511z3o3wWPrGQzKsA4H4O4p_Yso7Lu7mocc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIxIiwicGFzcyI6MTIzNDUsImlhdCI6MTYyMzAxNjEwOSwiZXhwIjoxNjIzMDE5NzA5fQ.3PNgaaTQ0gVoIZE-uUo0ZyUa6mF-B7ecGxSjlwIdQ2c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cliente/inserirCliente?senha=12345&telefone=88888&endereco=avenida&cpf=22222225&nome=fulano",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cliente",
+								"inserirCliente"
+							],
+							"query": [
+								{
+									"key": "senha",
+									"value": "12345"
+								},
+								{
+									"key": "x-auth-token",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "telefone",
+									"value": "88888"
+								},
+								{
+									"key": "endereco",
+									"value": "avenida"
+								},
+								{
+									"key": "cpf",
+									"value": "22222225"
+								},
+								{
+									"key": "nome",
+									"value": "fulano"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"telefone\": \"985559887\",\r\n        \"endereco\": \"Rua Albion\",\r\n        \"senha\": 11111\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cliente/atualizarCliente/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cliente",
+								"atualizarCliente",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarCliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6Ik1hcmlhIEVkdWFyZGEiLCJjcGYiOiI5OTk2NjY5OTk2NiIsImlhdCI6MTYyMjg0OTgzNCwiZXhwIjoxNjIyODUzNDM0fQ.1VR6Vk0T511z3o3wWPrGQzKsA4H4O4p_Yso7Lu7mocc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/cliente/listarCliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cliente",
+								"listarCliente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "deletarMenu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/menu/deletarMenu/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu",
+								"deletarMenu",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserirMenu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"California\",\r\n        \"descricao\": \"Blue cheese, molho da casa, alface, cogumelos salteados na manteiga e ketchup artesanal de goiaba.\",\r\n        \"valor\": \r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/menu/inserirMenu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu",
+								"inserirMenu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarMenu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/menu/listarMenu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"menu",
+								"listarMenu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "inserirPedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cod_prod\": 16,\r\n        \"cod_cli\": 2,\r\n        \"quantidade\": 4\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/pedido/inserirPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pedido",
+								"inserirPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarPedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/pedido/listarPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pedido",
+								"listarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPedido",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6Ik1hcmlhIEVkdWFyZGEiLCJjcGYiOiI5OTk2NjY5OTk2NiIsImlhdCI6MTYyMjg0OTgzNCwiZXhwIjoxNjIyODUzNDM0fQ.1VR6Vk0T511z3o3wWPrGQzKsA4H4O4p_Yso7Lu7mocc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/pedido/buscarPedido/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pedido",
+								"buscarPedido",
+								"4"
+							],
+							"query": [
+								{
+									"key": "x-auth-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6Ik1hcmlhIEVkdWFyZGEiLCJjcGYiOiI5OTk2NjY5OTk2NiIsImlhdCI6MTYyMjg0OTYyNiwiZXhwIjoxNjIyODUzMjI2fQ.IOufE5zBsf0KtLdAaw7wUcfnDQOzOJ61M10wu0GfsBo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "inserirUsuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"usuario\": \"teste3\",\r\n        \"senha\": 87459        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/usuario/inserirUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuario",
+								"inserirUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "authCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cpf\": \"99966699966\",\r\n        \"senha\": 12345        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"usuario\": \"teste\",\r\n        \"senha\": 12345        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/authUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"authUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
